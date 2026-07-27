@@ -237,3 +237,8 @@ footer{font-size:18px;padding:18px}
 .prev-btn { right: 2px; }
 .next-btn { left: 2px; }
 }
+/* حذف رنگ آبی هنگام کلیک/لمس روی لینک‌ها و دکمه‌ها */
+a, button {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
