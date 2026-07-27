@@ -15,6 +15,25 @@
   <a href="index.html"><img src="images/header.png" alt="جوجه نژاددار مزرعه"></a>
 </header>
 
+<!-- دکمه کرکره‌ای تماس با ما -->
+<div class="header-contact-container">
+  <button class="contact-toggle-btn" onclick="toggleContactDropdown(this)">
+    <i class="fa-solid fa-phone"></i>
+    <span>تماس با ما</span>
+    <i class="fa-solid fa-chevron-down arrow-icon"></i>
+  </button>
+  
+  <div class="contact-dropdown-content" id="contactDropdown">
+    <div class="dropdown-phone-box">
+      <div class="dropdown-name">علیزاده:</div>
+      <div class="dropdown-numbers">
+        <a href="tel:09337123210">09337123210</a>
+        <a href="tel:09908244992">09908244992</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <main class="product-page">
 
   <!-- گالری عکس جوجه‌ها -->
@@ -25,7 +44,7 @@
       <div class="instagram-slider">
         <img src="images/rishoo-chick1.png" alt="جوجه ریشو 1">
         <img src="images/rishoo-chick2.png" alt="جوجه ریشو 2">
-        <img src="images/rishoo-chick3.png" alt="جوجه ریشو 3">
+        <!-- <img src="images/rishoo-chick3.png" alt="جوجه ریشو 3"> -->
         <!-- <img src="images/rishoo-chick4.png" alt="جوجه ریشو 4">
         <img src="images/rishoo-chick5.png" alt="جوجه ریشو 5">
         <img src="images/rishoo-chick6.png" alt="جوجه ریشو 6">
@@ -120,6 +139,13 @@ function scrollSlider(btn, distance) {
     left: distance,
     behavior: 'smooth'
   });
+}
+
+/* اسکریپت فعال‌سازی دکمه کرکره‌ای تماس با ما */
+function toggleContactDropdown(btn) {
+  btn.classList.toggle('active');
+  const content = document.getElementById('contactDropdown');
+  content.classList.toggle('open');
 }
 </script>
 

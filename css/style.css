@@ -242,3 +242,120 @@ a, button {
   -webkit-tap-highlight-color: transparent;
   outline: none;
 }
+/* حذف رنگ آبی هنگام کلیک/لمس روی لینک‌ها و دکمه‌ها */
+a, button {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+/* دکمه و بخش کرکره‌ای تماس با ما زیر هدر */
+.header-contact-container {
+  width: 90%;
+  max-width: 500px;
+  margin: 10px auto 15px auto;
+  text-align: center;
+}
+
+.contact-toggle-btn {
+  width: 100%;
+  background-color: #27ae60; /* رنگ سبز جذاب */
+  color: #ffffff;
+  border: none;
+  padding: 12px 18px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+.contact-toggle-btn:active {
+  transform: scale(0.98);
+}
+
+.contact-toggle-btn i.arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+/* حالت چرخش فلش هنگام باز شدن */
+.contact-toggle-btn.active i.arrow-icon {
+  transform: rotate(180deg);
+}
+
+/* باکس محتوای کرکره‌ای */
+.contact-dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, padding 0.3s ease;
+  background-color: #ffffff;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  margin-top: 2px;
+}
+
+.contact-dropdown-content.open {
+  max-height: 150px; /* ارتفاع کافی برای نمایش شماره‌ها */
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  border-top: none;
+}
+
+.dropdown-phone-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  border-bottom: 1px dashed #eee;
+}
+
+.dropdown-phone-row:last-child {
+  border-bottom: none;
+}
+
+.dropdown-phone-row a {
+  color: #2c3e50;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  direction: ltr;
+}
+
+.dropdown-phone-row .name {
+  color: #7f8c8d;
+  font-size: 14px;
+}
+/* استایل جدید کرکره‌ای تماس با ما */
+.dropdown-phone-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+}
+
+.dropdown-name {
+  color: #2c3e50;
+  font-size: 16px;
+  font-weight: bold; /* درشت‌تر شدن نام علیزاده */
+}
+
+.dropdown-numbers {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.dropdown-numbers a {
+  color: #2c3e50;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  direction: ltr;
+}
